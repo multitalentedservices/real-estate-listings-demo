@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arz Estates (Demo) — Houses, Apartments & Plots in Pakistan</title>
+<meta name="description" content="Fictional demo property portal: search houses, apartments and plots for sale and rent across Lahore, Karachi, Islamabad and Gujranwala. All listings are invented demo data.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Featured demo property listings","itemListElement":[]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="demo-ribbon"><strong>DEMO WEBSITE</strong> — Arz Estates is a fictional agency and every listing below is invented demo data. No property here is real or available.</div>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="index.html">Arz<span>Estates</span></a>
+<nav aria-label="Main">
+<a href="index.html" aria-current="page">Home</a>
+<a href="listings.html">Listings</a>
+<a href="about.html">About</a>
+<a href="contact.html">Enquire</a>
+<a href="listings.html">Saved<span class="fav-count num" data-fav-count>0</span></a>
+</nav></div></header>
+<main id="main">
+
+<div class="hero"><img class="kenburns" src="assets/hero.jpg" alt="City skyline with houses and apartment buildings in bright daylight (demo photo)">
+<div class="shade"></div><div class="wrap hero-in">
+<h1>Find a place you can picture living in.</h1>
+<p>Demo listings for houses, apartments and plots across four Pakistani cities — searchable by the numbers that matter: price, beds, size, city.</p>
+<form class="hero-search" action="listings.html" method="get" role="search">
+<div><label class="fl" for="h-q">Keyword, area or city</label><input class="field" id="h-q" name="q" type="search" placeholder="e.g. DHA, Clifton, 10 Marla"></div>
+<div><label class="fl" for="h-purpose">Purpose</label><select class="field" id="h-purpose" name="purpose"><option value="all">Buy or rent</option><option value="sale">For sale</option><option value="rent">For rent</option></select></div>
+<div style="align-self:end"><button class="btn" type="submit" style="width:100%">Search listings</button></div>
+</form>
+</div></div>
+<section><div class="wrap">
+<p class="kicker">Featured demo listings</p><h2 class="sec">This week's picks</h2>
+<p class="lede">A hand-picked slice of the demo catalogue. Every property is fictional — the search, filters and enquiry buttons are fully working.</p>
+<div class="grid" data-featured></div>
+<p style="margin-top:24px"><a class="btn ghost" href="listings.html">Browse all 14 demo listings</a></p>
+</div></section>
+<section class="band"><div class="wrap">
+<p class="kicker">How this demo works</p><h2 class="sec">Search first, enquire in one tap</h2>
+<div class="grid">
+<article class="card"><div class="body"><h3>1 · Filter by numbers</h3><p class="loc">Type, city, purpose, price band and minimum beds combine instantly on the listings page — with a live result count.</p></div></article>
+<article class="card"><div class="body"><h3>2 · Read the full spec</h3><p class="loc">Each property page carries the complete specification, features, a location panel and an illustrative monthly estimate for sale listings.</p></div></article>
+<article class="card"><div class="body"><h3>3 · Enquire per property</h3><p class="loc">Every card has a WhatsApp enquiry prefilled with that property's ref and title, plus a validated enquiry form. Demo only — nothing reaches a real agent.</p></div></article>
+</div></div></section>
+</main>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div><h2 style="font-size:19px;color:#fff">Arz Estates (Demo)</h2><p>A fictional estate agency built as a portfolio demo. Listings, prices, people and phone numbers are invented.</p></div>
+<div><h2 style="font-size:19px;color:#fff">Explore</h2><p><a href="listings.html">All listings</a><br><a href="listings.html?purpose=sale">For sale</a><br><a href="listings.html?purpose=rent">For rent</a><br><a href="about.html">About the agency</a></p></div>
+<div><h2 style="font-size:19px;color:#fff">Enquire</h2><p><a href="contact.html">General enquiry form</a><br>Demo WhatsApp: 0300 0000000<br>Lahore, Pakistan (demo address)</p></div>
+</div>
+<p style="margin-top:22px;font-size:14px">DEMO: This is a demonstration website by Multi-Talented Services for BalanceBit Solutions' portfolio. No real properties are listed and no enquiries reach a real agency.</p>
+</div></footer>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

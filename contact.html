@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enquire — Arz Estates (Demo)</title>
+<meta name="description" content="Send a demo property enquiry: a validated form with an honest local-only success state. No message reaches a real agency.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="demo-ribbon"><strong>DEMO WEBSITE</strong> — Arz Estates is a fictional agency and every listing below is invented demo data. No property here is real or available.</div>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="index.html">Arz<span>Estates</span></a>
+<nav aria-label="Main">
+<a href="index.html">Home</a>
+<a href="listings.html">Listings</a>
+<a href="about.html">About</a>
+<a href="contact.html" aria-current="page">Enquire</a>
+<a href="listings.html">Saved<span class="fav-count num" data-fav-count>0</span></a>
+</nav></div></header>
+<main id="main">
+
+<section><div class="wrap">
+<p class="kicker">Enquire</p><h1 style="font-size:clamp(28px,4vw,40px)">Ask about a property</h1>
+<p class="lede">Use the form for a general question or about one listing — add its ref (like AP-1001) if you have it. On this demo, submissions are recorded only in your own browser.</p>
+<form data-enquiry-form novalidate style="margin-top:24px;max-width:760px">
+<div class="form-grid">
+<div><label class="fl" for="e-name">Your full name</label><input class="field" id="e-name" name="name" type="text" autocomplete="name" placeholder="e.g. Ahmed Raza"><div class="err" data-error-for="name" aria-live="polite"></div></div>
+<div><label class="fl" for="e-phone">Mobile number</label><input class="field" id="e-phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 0321 1234567"><div class="err" data-error-for="phone" aria-live="polite"></div></div>
+<div class="full"><label class="fl" for="e-ref">Property ref (optional)</label><input class="field" id="e-ref" name="ref" type="text" placeholder="e.g. AP-1001"><div class="err" data-error-for="ref" aria-live="polite"></div></div>
+<div class="full"><label class="fl" for="e-msg">Your message</label><textarea class="field" id="e-msg" name="message" placeholder="Tell us what you would like to know about this property"></textarea><div class="err" data-error-for="message" aria-live="polite"></div></div>
+</div>
+<p style="margin-top:8px"><button class="btn" type="submit">Send demo enquiry</button></p>
+</form>
+<div class="success" data-enquiry-success hidden><h2 style="font-size:22px">Enquiry recorded (demo)</h2><p data-success-text></p><p><a class="btn ghost" href="listings.html">Back to listings</a></p></div>
+<div class="panel map" style="margin-top:28px;max-width:760px"><h2 style="font-size:20px">Office — Main Boulevard, Gulberg, Lahore (demo address)</h2><p class="note">Styled location panel (demo). No live map is embedded.</p><p><a class="btn small ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Main+Boulevard+Gulberg+Lahore+Pakistan">Open in Google Maps</a></p></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div><h2 style="font-size:19px;color:#fff">Arz Estates (Demo)</h2><p>A fictional estate agency built as a portfolio demo. Listings, prices, people and phone numbers are invented.</p></div>
+<div><h2 style="font-size:19px;color:#fff">Explore</h2><p><a href="listings.html">All listings</a><br><a href="listings.html?purpose=sale">For sale</a><br><a href="listings.html?purpose=rent">For rent</a><br><a href="about.html">About the agency</a></p></div>
+<div><h2 style="font-size:19px;color:#fff">Enquire</h2><p><a href="contact.html">General enquiry form</a><br>Demo WhatsApp: 0300 0000000<br>Lahore, Pakistan (demo address)</p></div>
+</div>
+<p style="margin-top:22px;font-size:14px">DEMO: This is a demonstration website by Multi-Talented Services for BalanceBit Solutions' portfolio. No real properties are listed and no enquiries reach a real agency.</p>
+</div></footer>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

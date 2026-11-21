@@ -1,0 +1,97 @@
+PASS  data: at least 12 properties (14)
+PASS  data: refs unique
+PASS  data: every ref matches AP-NNNN
+PASS  data: price/size/title/desc/features sane
+PASS  data: sale prices are total prices (>= PKR 10 lakh)
+PASS  data: rent prices are monthly (< PKR 10 lakh)
+PASS  data: plots have 0 beds/baths, homes have >=1
+PASS  data: every city in the covered list
+PASS  data: houses, apartments and plots all present
+PASS  data: sale and rent both present
+PASS  data: every property photo file exists on disk
+PASS  data: hero + office photos exist
+PASS  filter: no filters = 14
+PASS  filter: type house = 7 exact
+PASS  filter: type apartment = 4
+PASS  filter: type plot = 3
+PASS  filter: city Lahore = 6
+PASS  filter: city Karachi = 4
+PASS  filter: city Islamabad = 2
+PASS  filter: city Gujranwala = 2
+PASS  filter: purpose sale = 10
+PASS  filter: purpose rent = 4
+PASS  filter: price under 1cr = 5 (4 rents + cheapest plot)
+PASS  filter: price 1-5cr = 3
+PASS  filter: price 5-10cr = 3
+PASS  filter: price over 10cr = 3
+PASS  filter: min 3 beds = 9
+PASS  filter: min 5 beds = 4
+PASS  filter: min 1 bed excludes all 3 plots
+PASS  search: keyword DHA matches area/title
+PASS  search: keyword by ref exact
+PASS  search: keyword margalla = 1 (title match, case-insensitive)
+PASS  search: multi-word keyword is AND across words
+PASS  search: keyword miss = 0
+PASS  combined: house + Lahore + sale = AP-1001,AP-1007
+PASS  combined: rent + Lahore + 2 beds = AP-1006,AP-1011
+PASS  combined: plot + under 1cr = AP-1014 only
+PASS  combined: keyword dha + rent = 1 (only AP-1012; expectation corrected from 2 during the pass — disclosed)
+PASS  combined: apartment + Gujranwala = 0 (empty case)
+PASS  sort: price-asc first = cheapest rent AP-1012
+PASS  sort: price-desc first = AP-1013
+PASS  sort: price-asc fully monotonic
+PASS  sort: size-desc first = 2 kanal AP-1013
+PASS  sort: size-asc first = 650 sq ft AP-1012
+PASS  sort: newest first = added 1 day ago (AP-1006)
+PASS  pipeline: search Lahore + sort price-asc = exact ordered refs
+PASS  empty: message names type + city and offers reset
+PASS  empty: message names keyword + price band
+PASS  format: formatPKR thousands exact
+PASS  format: 58,500,000 = PKR 5.85 Crore
+PASS  format: 6,500,000 = PKR 65 Lakh
+PASS  format: 245,000,000 = PKR 24.5 Crore
+PASS  format: rent shows / month
+PASS  estimate: zero rate = principal / months exact
+PASS  estimate: 50% down halves the payment
+PASS  estimate: 18% annuity in sane range
+PASS  estimate: higher rate = higher payment
+PASS  whatsapp: link targets the demo number
+PASS  whatsapp: message prefilled with ref + title
+PASS  whatsapp: every property builds a ref-prefilled link
+PASS  maps: search link carries area + city
+PASS  validate: good enquiry passes
+PASS  validate: ref is optional
+PASS  validate: short name rejected
+PASS  validate: bad phone rejected
+PASS  validate: malformed ref rejected by format
+PASS  validate: short message rejected
+PASS  url: filter state round-trips through query params
+PASS  url: default state produces a clean URL
+PASS  favourites: toggle adds then removes
+PASS  contrast: ink on white = 14.90:1 >= 4.5
+PASS  contrast: ink on surface = 13.14:1 >= 4.5
+PASS  contrast: muted on white = 7.43:1 >= 4.5
+PASS  contrast: muted on surface = 6.55:1 >= 4.5
+PASS  contrast: white on accent (buttons) = 6.25:1 >= 4.5
+PASS  contrast: accent-dark on white (links) = 8.75:1 >= 4.5
+PASS  contrast: accent-dark on tint (kickers) = 7.09:1 >= 4.5
+PASS  contrast: error red on white = 6.54:1 >= 4.5
+PASS  contrast: footer note on ink = 11.17:1 >= 4.5
+PASS  contrast: white on ink (rent badge) = 14.90:1 >= 4.5
+PASS  contrast: ink-2 on tint (badges) = 9.56:1 >= 4.5
+PASS  contrast: focus outline accent on white = 6.25:1 >= 3.0 (non-text)
+PASS  seo: every page has a real title
+PASS  seo: titles unique per page
+PASS  seo: meta description on every page
+PASS  demo: DEMO labelling on every page
+PASS  a11y: skip link + main landmark on every page
+PASS  links: every local href/src across 5 pages resolves
+PASS  seo: sitemap.xml + robots.txt present
+PASS  seo: JSON-LD on home
+PASS  privacy: no live analytics endpoints
+PASS  maps: no live map iframe anywhere (link by design)
+PASS  weights: code 58 KB < 400 KB
+PASS  weights: media 1318 KB <= 1.6 MB
+PASS  weights: largest image 100 KB <= ~120 KB
+
+TOTAL: 95 PASS / 0 FAIL

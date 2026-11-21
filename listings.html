@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search Demo Property Listings — Arz Estates (Demo)</title>
+<meta name="description" content="Search and filter 14 fictional demo properties by keyword, type, city, purpose, price band and bedrooms, with live counts and sorting.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="demo-ribbon"><strong>DEMO WEBSITE</strong> — Arz Estates is a fictional agency and every listing below is invented demo data. No property here is real or available.</div>
+<header class="site"><div class="wrap nav">
+<a class="logo" href="index.html">Arz<span>Estates</span></a>
+<nav aria-label="Main">
+<a href="index.html">Home</a>
+<a href="listings.html" aria-current="page">Listings</a>
+<a href="about.html">About</a>
+<a href="contact.html">Enquire</a>
+<a href="listings.html">Saved<span class="fav-count num" data-fav-count>0</span></a>
+</nav></div></header>
+<main id="main">
+
+<section style="padding-top:34px"><div class="wrap">
+<p class="kicker">Demo catalogue</p><h1 style="font-size:clamp(28px,4vw,40px)">Search property listings</h1>
+<p class="lede">All 14 properties are fictional demo data. Filters combine — every control narrows the same result set, and the count updates as you type.</p>
+<form class="filterbar" data-filter-form style="margin-top:22px">
+<div class="wide"><label class="fl" for="f-q">Keyword — title, area, city or ref</label><input class="field" id="f-q" name="q" type="search" placeholder="e.g. DHA, Margalla, AP-1004"></div>
+<div class="wide"><span class="fl" id="type-label">Property type</span><div class="chips" role="group" aria-labelledby="type-label">
+<button type="button" class="chip" data-type-chip="all" aria-pressed="true">All types</button>
+<button type="button" class="chip" data-type-chip="house" aria-pressed="false">Houses</button>
+<button type="button" class="chip" data-type-chip="apartment" aria-pressed="false">Apartments</button>
+<button type="button" class="chip" data-type-chip="plot" aria-pressed="false">Plots</button>
+</div></div>
+<div><label class="fl" for="f-city">City</label><select class="field" id="f-city" name="city"><option value="all">All cities</option><option>Lahore</option><option>Karachi</option><option>Islamabad</option><option>Gujranwala</option></select></div>
+<div><label class="fl" for="f-purpose">Purpose</label><select class="field" id="f-purpose" name="purpose"><option value="all">Buy or rent</option><option value="sale">For sale</option><option value="rent">For rent</option></select></div>
+<div><label class="fl" for="f-price">Price band</label><select class="field" id="f-price" name="price"><option value="all">Any price</option><option value="lt-1cr">Under PKR 1 Crore</option><option value="1-5cr">PKR 1–5 Crore</option><option value="5-10cr">PKR 5–10 Crore</option><option value="gt-10cr">Over PKR 10 Crore</option></select></div>
+<div><label class="fl" for="f-beds">Minimum bedrooms</label><select class="field" id="f-beds" name="minBeds"><option value="0">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></div>
+<div><label class="fl" for="f-sort">Sort by</label><select class="field" id="f-sort" name="sort"><option value="newest">Newest first</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="size-desc">Size: largest first</option><option value="size-asc">Size: smallest first</option></select></div>
+<div style="align-self:end"><button type="button" class="btn ghost" data-reset style="width:100%">Reset all filters</button></div>
+</form>
+<div class="result-line"><span class="result-count num" data-result-count aria-live="polite">14 properties found</span><span class="note">Demo data — no property here is real.</span></div>
+<div class="grid" data-listings-grid></div>
+<div class="empty" data-empty hidden><h2 style="font-size:23px">No matches</h2><p data-empty-msg></p><button type="button" class="btn" data-empty-reset>Reset the search</button></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div><h2 style="font-size:19px;color:#fff">Arz Estates (Demo)</h2><p>A fictional estate agency built as a portfolio demo. Listings, prices, people and phone numbers are invented.</p></div>
+<div><h2 style="font-size:19px;color:#fff">Explore</h2><p><a href="listings.html">All listings</a><br><a href="listings.html?purpose=sale">For sale</a><br><a href="listings.html?purpose=rent">For rent</a><br><a href="about.html">About the agency</a></p></div>
+<div><h2 style="font-size:19px;color:#fff">Enquire</h2><p><a href="contact.html">General enquiry form</a><br>Demo WhatsApp: 0300 0000000<br>Lahore, Pakistan (demo address)</p></div>
+</div>
+<p style="margin-top:22px;font-size:14px">DEMO: This is a demonstration website by Multi-Talented Services for BalanceBit Solutions' portfolio. No real properties are listed and no enquiries reach a real agency.</p>
+</div></footer>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
