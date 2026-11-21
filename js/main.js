@@ -4,7 +4,26 @@
   var D = window.ESTATE_DATA, L = window.ESTATE_LOGIC;
   document.documentElement.classList.add('js');
 
-  /* Reveal-by-default + IO pre-reveal + 2s fallback + reduced-motion instant (lessons 2+11) */
+  /* Reveal: opacity is NEVER gated (v3 pattern) — the IO + 2s fallback only settle a
+     gentle position rise, so no photo or section can render blank at any scroll speed.
+     Reduced-motion = no rise at all (CSS). */
+
+  /* Mobile nav (hamburger <=700px) */
+  var navToggle = document.querySelector('.nav-toggle');
+  var mainNav = document.getElementById('main-nav');
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', function () {
+      var open = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    mainNav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { mainNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); navToggle.setAttribute('aria-label', 'Open menu'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('open')) { mainNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); navToggle.setAttribute('aria-label', 'Open menu'); navToggle.focus(); }
+    });
+  }
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '600px 0px' });
@@ -23,7 +42,7 @@
   function cardHTML(p) {
     var fav = getFavs().indexOf(p.ref) !== -1;
     return '<article class="card reveal in">' +
-      '<a href="property.html?id=' + p.ref + '"><img src="' + p.img + '" alt="Photo of ' + p.title + ' in ' + p.area + ', ' + p.city + ' (demo listing)" loading="lazy"></a>' +
+      '<a href="property.html?id=' + p.ref + '"><img src="' + p.img + '" alt="Photo of ' + p.title + ' in ' + p.area + ', ' + p.city + ' (demo listing)"></a>' +
       '<div class="body">' +
       '<span class="badge' + (p.purpose === 'rent' ? ' rent' : '') + '">' + (p.purpose === 'rent' ? 'For Rent' : 'For Sale') + ' · ' + p.ref + '</span>' +
       '<div class="price num">' + L.formatPriceShort(p) + '</div>' +
