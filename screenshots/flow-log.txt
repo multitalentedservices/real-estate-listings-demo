@@ -1,0 +1,21 @@
+unfiltered count -> 14 properties found
+filtered house+Lahore+sale count -> 2 properties found
+house chip aria-pressed -> true
+URL after filter -> listings.html?type=house&city=Lahore&purpose=sale
+sorted price-desc first card badge -> For Sale · AP-1013 (AP-1013 expected as highest price)
+empty state visible -> true
+empty message -> No properties match type: apartment + city: Gujranwala. Try removing one filter, or reset the search to see all listings.
+after empty-reset count -> 14 properties found
+keyword margalla count -> 1 property found
+FIRING favourites after toggle -> {"favs":["AP-1006"],"count":"1"}
+FIRING whatsapp log after card click -> [{"ref":"AP-1006","at":"2026-11-21T16:11:44.355Z","demo":true}]
+detail title -> Modern 10 Marla House in DHA Phase 6 — AP-1001 | Arz Estates (Demo)
+detail calc out -> PKR 631,986 / month
+detail calc after 50% down -> PKR 451,419 / month
+FIRING whatsapp log after detail click -> [{"ref":"AP-1006","at":"2026-11-21T16:11:44.355Z","demo":true},{"ref":"AP-1001","at":"2026-11-21T16:11:46.975Z","demo":true}]
+contact ref prefilled -> AP-1007
+form name error -> Please enter your full name.
+name error after fix (must be empty) -> ""
+form success visible -> true
+form success text -> Thank you, Ahmed Raza. Your demo enquiry about AP-1007 has been recorded locally in this browser only — no message has been sent to any real agency.
+FIRING enquiry log -> [{"name":"Ahmed Raza","phone":"0321 1234567","ref":"AP-1007","message":"Please share more details about this house.","at":"2026-11-21T16:11:48.706Z","demo":true}]

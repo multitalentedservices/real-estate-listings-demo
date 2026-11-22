@@ -11,7 +11,8 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.55}
 h1,h2,h3,.disp{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.15;margin:0}
 img{max-width:100%;display:block}
-a{color:var(--accent-dark)}
+a{color:var(--accent-dark);text-decoration:none}
+ul{margin:0;padding-left:1.15rem}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
 .num{font-variant-numeric:tabular-nums;font-feature-settings:'tnum' 1}
 .skip-link{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:60}
@@ -125,3 +126,38 @@ footer.site .cols>*{min-width:0}
   .js .reveal{opacity:1;transform:none;transition:none}
   .kenburns{animation:none}
 }
+/* === PREMIUM UPGRADE 2026-11-22 (Real Estate) ===
+   P7: cross-document View Transitions where supported, graceful without. */
+@view-transition{navigation:auto}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+/* GSAP parallax (index) drives transforms itself — the CSS Ken Burns on the
+   hero image is stood down only when the premium layer is live. */
+.premium-on .kenburns{animation:none}
+/* Property gallery (Swiper, property page only). Until Swiper initialises —
+   and permanently for no-JS / reduced-motion — slides stack as full photos,
+   so the gallery is complete without a slider. All three slides are the
+   listing's OWN demo photo: full view, then two labelled detail crops. */
+.prop-swiper .swiper-slide{overflow:hidden;border-radius:var(--radius)}
+.prop-swiper .swiper-slide img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius)}
+.prop-swiper .swiper-slide img.crop{transform:scale(1.45)}
+.prop-swiper:not(.swiper-initialized) .swiper-wrapper{display:grid;gap:16px;transform:none!important}
+.prop-swiper:not(.swiper-initialized) .swiper-slide{width:auto!important}
+.slide-cap{font-size:14px;color:var(--muted);margin-top:8px}
+.prop-controls{display:flex;align-items:center;gap:14px;margin-top:12px;flex-wrap:wrap}
+.prop-btn{min-width:52px;min-height:52px;border-radius:10px;border:2px solid var(--accent);background:#fff;color:var(--accent-dark);font-size:20px;font-weight:700;cursor:pointer;display:grid;place-items:center;padding:6px 12px}
+.prop-btn:hover{background:var(--tint)}
+.prop-btn.swiper-button-disabled{opacity:.45;cursor:not-allowed}
+.prop-pagination{position:static;width:auto!important}
+.prop-pagination .swiper-pagination-bullet{width:12px;height:12px;background:var(--accent);opacity:.35}
+.prop-pagination .swiper-pagination-bullet-active{opacity:1;background:var(--accent-dark)}
+@media (max-width:600px){.prop-swiper .swiper-slide img{height:260px}}
+/* Neighbourhood chapter (per property, Sobha chapter pattern without WebGL).
+   Copy comes only from the listing's own description + "Near …" features. */
+.chapter{background:var(--surface);overflow:hidden}
+.chapter-title{font-size:clamp(38px,6.5vw,76px);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;margin:8px 0 14px}
+.chapter-near{display:flex;gap:10px;flex-wrap:wrap;list-style:none;padding:0;margin:18px 0 0}
+.chapter-near li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14.5px;font-weight:600;color:var(--ink-2)}
+.chapter-band{position:relative;margin-top:26px;border-radius:var(--radius);overflow:hidden;height:300px}
+.chapter-band img{width:100%;height:130%;object-fit:cover;position:relative;top:-15%}
+.chapter-band-cap{position:absolute;left:14px;bottom:14px;background:var(--ink);color:#fff;font-size:13.5px;padding:7px 12px;border-radius:8px}
+@media (max-width:600px){.chapter-band{height:200px}}

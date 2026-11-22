@@ -1,0 +1,107 @@
+{
+  "index@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "index@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "index@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "listings@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "listings@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "listings@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "property@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "property@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "property@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "about@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "about@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "about@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "contact@phone": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "contact@tablet": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  },
+  "contact@desktop": {
+    "overflowX": 0,
+    "badEls": [],
+    "hiddenCount": 0,
+    "brokenImgs": [],
+    "textBad": []
+  }
+}

@@ -1,0 +1,66 @@
+PASS clinic index.html@1440 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS clinic index.html@1440 P1 links (29 links, blue 0, underlined 0)
+FAIL clinic index.html@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS clinic index.html@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS clinic index.html@390 P1 links (23 links, blue 0, underlined 0)
+FAIL clinic index.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS clinic services.html@1440 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS clinic services.html@1440 P1 links (39 links, blue 0, underlined 0)
+FAIL clinic services.html@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS clinic services.html@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS clinic services.html@390 P1 links (33 links, blue 0, underlined 0)
+FAIL clinic services.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS clinic doctors.html@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS clinic doctors.html@390 P1 links (13 links, blue 0, underlined 0)
+FAIL clinic doctors.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS clinic booking.html@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS clinic booking.html@390 P1 links (8 links, blue 0, underlined 0)
+FAIL clinic booking.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS clinic count-up completes to existing figures 12,4,4,6
+PASS clinic stat-num contrast 10.86:1
+PASS clinic stat-label contrast 10.65:1
+PASS clinic hero scrub crossfade mid-scroll opacities 0.7465,0
+PASS clinic services swiper initialised
+PASS clinic slider has all 12 services
+PASS clinic slider keyboard: Enter on Next advances (0->1)
+PASS clinic slider button focus outline 3px solid
+PASS clinic reduced-motion: figures final, sequence static {"nums":["12","4","4","6"],"frames":["0","0"]}
+PASS clinic reduced-motion: slider static grid, all 12 visible {"init":false,"visible":12}
+PASS clinic no-JS: all 12 slider services visible as cards (12)
+PASS clinic no-JS: numbers block reads final figures
+PASS RE index.html@1440 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS RE index.html@1440 P1 links (28 links, blue 0, underlined 0)
+FAIL RE index.html@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS RE index.html@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS RE index.html@390 P1 links (23 links, blue 0, underlined 0)
+FAIL RE index.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS RE listings.html@1440 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS RE listings.html@1440 P1 links (54 links, blue 0, underlined 0)
+FAIL RE listings.html@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS RE listings.html@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS RE listings.html@390 P1 links (49 links, blue 0, underlined 0)
+FAIL RE listings.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS RE property.html?id=AP-1001@1440 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS RE property.html?id=AP-1001@1440 P1 links (16 links, blue 0, underlined 0)
+FAIL RE property.html?id=AP-1001@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS RE property.html?id=AP-1001@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS RE property.html?id=AP-1001@390 P1 links (11 links, blue 0, underlined 0)
+FAIL RE property.html?id=AP-1001@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS RE about.html@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS RE about.html@390 P1 links (7 links, blue 0, underlined 0)
+FAIL RE about.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS RE contact.html@390 audit clean {"overflowX":0,"bad":[],"broken":[]}
+PASS RE contact.html@390 P1 links (8 links, blue 0, underlined 0)
+FAIL RE contact.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+PASS RE card parallax transform active: matrix(1.14, 0, 0, 1.14, 0, 3.6736)
+PASS RE featured images eager + painted (no lazy blank)
+PASS RE filter after count animation: {"count":"6 properties found","url":"?city=Lahore","cards":6}
+PASS RE count animates back to 14: 14 properties found
+PASS RE property gallery initialised, 3 views of own photo {"init":true,"slides":3,"chapter":"DHA Phase 6","near":1}
+PASS RE neighbourhood chapter for AP-1001: {"init":true,"slides":3,"chapter":"DHA Phase 6","near":1}
+PASS RE gallery keyboard advance (0->1)
+PASS RE reduced-motion: gallery stacked static, chapter present {"init":false,"visible":3,"chapter":true}
+PASS RE no-JS index clean {"overflowX":0,"bad":[],"broken":[]}
+
+PREMIUM CHECKS: 49 PASS / 14 FAIL
+FAILURES: clinic index.html@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | clinic index.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | clinic services.html@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | clinic services.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | clinic doctors.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | clinic booking.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | RE index.html@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | RE index.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | RE listings.html@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | RE listings.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | RE property.html?id=AP-1001@1440 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | RE property.html?id=AP-1001@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | RE about.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | RE contact.html@390 console clean Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
